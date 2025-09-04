@@ -1,9 +1,11 @@
 # Dependencies
 /node_modules
 /frontend/node_modules
+/dashboard/node_modules
 
 # Build files
 /frontend/build
+/dashboard/build
 /dist
 
 # Log files
