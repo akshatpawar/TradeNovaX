@@ -841,3 +841,31 @@ hr {
 .action:hover {
   background-color: rgb(212, 212, 212);
 }
+
+.menu-container {
+  display: flex;
+  /* align-items: center; */
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.menus {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.menus ul {
+  display: flex;
+  gap: 1rem; /* spacing between menu items */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Profile {
+  margin-left: auto; /* pushes profile to the right */
+  position: relative;
+}

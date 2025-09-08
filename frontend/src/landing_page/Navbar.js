@@ -53,6 +53,11 @@ function Navbar() {
                                     Support
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="http://localhost:3001" target="_blank" rel="noopener noreferrer">
+                                    Dashboard
+                                </a>
+                            </li>
                         </ul>
                     </form>
                 </div>

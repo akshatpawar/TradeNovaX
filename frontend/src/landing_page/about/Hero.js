@@ -5,9 +5,9 @@ function Hero() {
         <div className="container mt-5 pt-5">
             <div className="row p-5 mb-5">
                 <h2 className="fs-3 text-center">
-                    We pioneered the discount broking model in India
+                    I am building impactful solutions through technology
                     <br />
-                    Now, we are breaking ground with our technology.
+                    and exploring innovation with every project I create.
                 </h2>
             </div>
 
@@ -17,38 +17,18 @@ function Hero() {
             >
                 <div className="col-6 p-5">
                     <p>
-                        We kick-started operations on the 15th of August, 2010 with the goal
-                        of breaking all barriers that traders and investors face in India in
-                        terms of cost, support, and technology. We named the company
-                        Zerodha, a combination of Zero and "Rodha", the Sanskrit word for
-                        barrier.
+                        I am a Computer Science Engineering graduate (2025) specializing in Artificial Intelligence & Machine Learning and full-stack development. 
                     </p>
                     <p>
-                        Today, our disruptive pricing models and in-house technology have
-                        made us the biggest stock broker in India.
-                    </p>
-                    <p>
-                        Over 1+ Crore clients place millions of orders every day through our
-                        powerful ecosystem of investment platforms, contributing over 15% of
-                        all Indian retail trading volumes.
+                        With hands-on experience in technologies such as Python, SQL, Java, JavaScript, HTML, CSS, ReactJS, Node.js, TensorFlow, PyTorch, YOLOv9, OpenCV, Pandas, NumPy, Matplotlib, Git, Linux, and Vercel, I focus on solving problems through clean and efficient code.
                     </p>
                 </div>
                 <div className="col-6 p-5">
                     <p>
-                        In addition, we run a number of popular open online educational and
-                        community initiatives to empower retail traders and investors.
+                        I have built projects ranging from AI/ML experiments like an object detection system for marine life, to web applications such as MiniMind, my personal portfolio, and a contact manager.
                     </p>
                     <p>
-                        <a href="" style={{ textDecoration: "none" }}>
-                            Rainmatter
-                        </a>
-                        , our fintech fund and incubator, has invested in several fintech
-                        startups with the goal of growing the Indian capital markets.
-                    </p>
-                    <p>
-                        And yet, we are always up to something new every day. Catch up on
-                        the latest updates on our blog or see what the media is saying about
-                        us.
+                        These experiences reflect my adaptability and passion for creating innovative solutions that combine software engineering and modern technologies.
                     </p>
                 </div>
             </div>

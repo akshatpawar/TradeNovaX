@@ -24,8 +24,15 @@ const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allOrders").then((res) => {
+    const token = localStorage.getItem('token');
+    axios.get("http://localhost:3002/allOrders", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }).then((res) => {
       setAllOrders(res.data);
+    }).catch((error) => {
+      console.error('Error fetching orders:', error);
     });
   }, []);
 

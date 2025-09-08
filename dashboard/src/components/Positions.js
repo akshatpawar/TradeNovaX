@@ -6,8 +6,15 @@ const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3002/allPositions").then((res) => {
+    const token = localStorage.getItem('token');
+    axios.get("http://localhost:3002/allPositions", {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }).then((res) => {
       setAllPositions(res.data);
+    }).catch((error) => {
+      console.error('Error fetching positions:', error);
     });
   }, []);
 

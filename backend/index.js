@@ -5,9 +5,12 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const { HoldingsModel } = require("./model/HoldingsModel");
-
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
+
+// Import auth routes
+const authRoutes = require('./routes/auth');
+const auth = require('./middleware/auth');
 
 
 const PORT = process.env.PORT || 3002;
@@ -17,6 +20,9 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+
+// Auth routes
+app.use('/api/auth', authRoutes);
 
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [
@@ -187,22 +193,23 @@ app.use(bodyParser.json());
 //     res.send("Done!");
 // });
 
-app.get('/allHoldings', async (req, res) => {
+// Protected routes - require authentication
+app.get('/allHoldings', auth, async (req, res) => {
     let allHoldings = await HoldingsModel.find();
     res.json(allHoldings);
 });
 
-app.get('/allPositions', async (req, res) => {
+app.get('/allPositions', auth, async (req, res) => {
     let allPositions = await PositionsModel.find();
     res.json(allPositions);
 });
 
-app.get('/allOrders', async (req, res) => {
+app.get('/allOrders', auth, async (req, res) => {
     let allOrders = await OrdersModel.find();
     res.json(allOrders);
 });
 
-app.post('/newOrder', async (req, res) => {
+app.post('/newOrder', auth, async (req, res) => {
     let newOrder = new OrdersModel({
         name: req.body.name,
         qty: req.body.qty,
