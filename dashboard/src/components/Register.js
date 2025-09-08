@@ -38,8 +38,8 @@ const Register = ({ onClose, switchToLogin }) => {
 
     try {
       const { confirmPassword, ...registerData } = formData;
-      const response = await axios.post('http://localhost:3002/api/auth/register', registerData);
-      
+      const response = await axios.post(`${API_BASE_URL}/api/auth/register`, registerData);
+
       const { token, user } = response.data;
       
       // Store token in localStorage

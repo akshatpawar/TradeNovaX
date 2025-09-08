@@ -12,13 +12,20 @@ const { OrdersModel } = require("./model/OrdersModel");
 const authRoutes = require('./routes/auth');
 const auth = require('./middleware/auth');
 
-
 const PORT = process.env.PORT || 3002;
 const url = process.env.MONGO_URL;
 
 const app = express();
 
-app.use(cors());
+// Update CORS for production
+const corsOptions = {
+    origin: process.env.NODE_ENV === 'production' 
+        ? [process.env.FRONTEND_URL, process.env.DASHBOARD_URL]
+        : ['http://localhost:3000', 'http://localhost:3001'],
+    credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Auth routes

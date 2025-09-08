@@ -7,7 +7,7 @@ const Positions = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    axios.get("http://localhost:3002/allPositions", {
+    axios.get(`${API_BASE_URL}/allPositions`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
