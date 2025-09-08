@@ -2,10 +2,12 @@
 /node_modules
 /frontend/node_modules
 /dashboard/node_modules
+/backend/node_modules
 
 # Build files
 /frontend/build
 /dashboard/build
+/backend/build
 /dist
 
 # Log files
@@ -19,6 +21,11 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+/backend/.env
+/backend/.env.local
+/backend/.env.development.local
+/backend/.env.test.local
+/backend/.env.production.local
 
 # IDE / Editor specific
 .vscode/
