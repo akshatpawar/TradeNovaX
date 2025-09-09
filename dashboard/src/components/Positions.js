@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import { positions } from "../data/data";
+import { API_BASE_URL } from '../config/api';
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);

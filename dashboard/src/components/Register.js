@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import GeneralContext from './GeneralContext';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import { API_BASE_URL } from '../config/api';
 
 const Register = ({ onClose, switchToLogin }) => {
   const [formData, setFormData] = useState({
